@@ -7,6 +7,8 @@ Zabbix-Templates
 *	OS_Network_Status
 *	...
 
+
+
 #### App:
 *	App_Apache_Status
 *	App_Nginx_Status
