@@ -1,9 +1,10 @@
 #!/bin/bash 
 
 tcp_send_file="/tmp/tcp_send_file"
-hostname=`hostname`
+hostname=`ifconfig | awk -F "[: ]+" 'NR==2{print $4}'`-`hostname`
+#hostname=`hostname`
 zabbix_conf="/etc/zabbix/zabbix_agentd.conf"
-zabbix_send="/usr/bin/zabbix_sender"
+zabbix_send="/usr/local/zabbix/bin/zabbix_sender"
 service="netstat"
 
 function get_status()
